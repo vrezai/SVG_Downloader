@@ -109,6 +109,10 @@ p.author {
     margin: 1rem 0;
 }
 
+.author a {
+    color: var(--color-blue);
+}
+
 #warning {
     text-align: center;
     text-decoration: none;
