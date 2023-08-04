@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background-color: #191919;
+    --backround-color2: #202020;
+    --color-h1: white;
+    --color-p: grey;
+    --color-blue: #38B6FF;
+    --color-bluehover: #32a4e6;
+    --download: red;
+    --downloadhover: rgb(202, 10, 10);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    color: var(--color-h1);
+}
+
+.container p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--color-p);
+    font-size: .9rem;
+}
+
+.container-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+    margin: 0 5%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content textarea {
+    background-color: var(--backround-color2);
+    border: 1px solid var(--backround-color2);
+    border-radius: 24px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: var(--color-h1);
+}
+
+.content #generateBtn {
+    background-color: var(--color-blue);
+    padding: 1rem 0;
+    border: none;
+    border-radius: 12px;
+    color: var(--color-h1);
+    font-size: .9rem;
+    transition: 200ms;
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+.content #generateBtn:hover {
+    transition: 200ms;
+    background-color: var(--color-bluehover);
+}
+
+.content #downloadLink {
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--download);
+    padding: 1rem 0;
+    border: none;
+    border-radius: 12px;
+    color: var(--color-h1);
+    font-size: .9rem;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.content #downloadLink:hover {
+    transition: 200ms;
+    background-color: var(--downloadhover);
+}
+
+#tutorial {
+    border-radius: 12px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+p.author {
+    text-align: center;
+    font-size: .8rem;
+    margin: 1rem 0;
+}
+
+#warning {
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--download);
+    padding: 1rem 0;
+    border-radius: 12px;
+    color: var(--download);
+    font-size: .9rem;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    #warning {
+        display: none;
+    }    
+}
+
+@media only screen and (max-width: 600px) {
+    .container-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-inner .content {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #tutorial {
+        display: none;
+    }
+
+    #warning {
+        display: block;
+    }
+}
